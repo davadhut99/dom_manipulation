@@ -45,7 +45,7 @@ console.log(items);
 console.log(items[1]);
 
 items[1].style.fontWeight = 'bold';
-items[1].style.backgroundcolor = 'yellow';
+items[1].style.backgroundColor = 'yellow';
 //GIVES ERROR
 //items.style.backgroundcolor='#f4f4f4';
 for (var i = 0; i < items.length; i++) {
