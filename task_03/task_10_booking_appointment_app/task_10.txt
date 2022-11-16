@@ -1,0 +1,29 @@
+Task Description
+Remember the form which you had built in task after watching this video in the last assignment 
+- https://www.youtube.com/embed/hdI2bqOjy3c?t=5080s
+
+Now when the user clicks on Submit , store the user details in the local Storage.
+Confused how to store the data in the local storage.
+
+[Watch this video to understand how to store data in localStorage -
+ https://www.youtube.com/watch?v=GihQAC1I39Q].
+
+Deliverable
+
+Write logic to store the details entered by the user in the local storage when he clicks on submit. Watch this video to understand the agorithm that you can use
+https://www.youtube.com/watch?v=lGmSZQwa3B4
+
+
+Getting stuck to a problem and trying to figure out the solution to it is what will make you a strong software developer.
+
+Watch this video to understand how you can debug effectively and find a solution.
+
+
+
+[If you are stuck for more than an hour , check the hints]
+
+
+
+
+
+Push the code to git and upload the commit ID
