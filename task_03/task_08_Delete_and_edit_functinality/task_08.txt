@@ -1,0 +1,16 @@
+Task Description
+Watch the video uptill the 15th min and learn how to add the delete button into your code.
+https://www.youtube.com/watch?v=i37KVt_IcXw
+
+The right way to debug your javascript code. Watch this video to understand it.
+
+For the boiler plate code - https://codepen.io/bradtraversy/pen/Bwapow
+
+Deliverable
+
+1.	On clicking the delete button we should be able to remove the newly created li tag
+2.	Now add an edit button next to the delete icon.[Dont have to build the functionality]
+3.	DOM manipulation key takeaways that you would need and should remember. Watch this video - https://www.youtube.com/watch?v=pfT_0K07c4E
+
+Push the code to git and upload the commit id
+
