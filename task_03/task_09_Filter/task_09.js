@@ -19,7 +19,7 @@ function addItem(e) {
 
     // Get input value
     var newItem = document.getElementById('item').value;
-    var newItem2 = document.getElementById('item2').value;
+    var description = document.getElementById('description').value;
 
     // Create new li element
     var li = document.createElement('li');
@@ -28,7 +28,7 @@ function addItem(e) {
     // Add text node with input value
 
     li.appendChild(document.createTextNode(newItem));
-    li.appendChild(document.createTextNode(newItem2));
+    li.appendChild(document.createTextNode(description));
 
     // Create del button element
     var deleteBtn = document.createElement('button');
@@ -45,7 +45,7 @@ function addItem(e) {
     // Append li to list
     itemList.appendChild(li);
 
-     // edit button
+    // edit button
     var editBtn = document.createElement('button');
     editBtn.className = 'btn-primary float-right mr-2';
     editBtn.appendChild(document.createTextNode('Edit'));
@@ -53,7 +53,7 @@ function addItem(e) {
     itemList.appendChild(li);
 
 }
-function editItems(){}
+function editItems() { }
 /*
 function editItems() {
     var editBtn = document.createElement('button');
@@ -84,13 +84,14 @@ function removeItem(e) {
 // Filter Items
 function filterItems(e) {
     // convert text to lowercase
-    var text = e.target.value.toLowerCase();
-    // Get lis
-    var items = itemList.getElementsByTagName('li');
+    const text = e.target.value.toLowerCase();
+    // Get list
+    const items = itemList.getElementsByTagName('li');
     // Convert to an array
     Array.from(items).forEach(function (item) {
         var itemName = item.firstChild.textContent;
-        if (itemName.toLowerCase().indexOf(text) != -1) {
+        var description = item.childNodes[1].textContent;
+        if (itemName.toLowerCase().indexOf(text) != -1 || description.toLowerCase().indexOf(text) != -1) {
             item.style.display = 'block';
         } else {
             item.style.display = 'none';
