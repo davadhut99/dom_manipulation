@@ -1,17 +1,17 @@
+import "../styles.css";
 
 const submitButton = document.getElementById("submit");
 
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   console.log("vscode");
-//   localStorage.getItem();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("vscode");
+  localStorage.getItem();
+});
 
 if (document.readyState !== "loading") {
   console.log("vscode");
 
-  var keys = Object.keys(localStorage);//taking out all the keys that are there in the local storage
-  var i = keys.length; //6
+  var keys = Object.keys(localStorage), //taking out all the keys that are there in the local storage
+    i = keys.length; //6
   console.log("keys", keys);
   let stringifiedDetailsOfPeople, detailsOfPeople;
 
@@ -40,9 +40,9 @@ submitButton.addEventListener("click", (e) => {
       name: name,
       emailId: emailId //unique
     };
-    localStorage.setItem(emailId, JSON.stringify(object));
+    localStorage.setItem("userDetails" + emailId, JSON.stringify(object));
     // localStorage.setItem("userDetailEmail" + emailId, emailId);
-    // listOfPeople.push(object);
+    // listOfPeople.push(object)
     addNewLineElement(object);
   }
 });
@@ -54,35 +54,35 @@ function addNewLineElement(object) {
     document.createTextNode(object.name + " " + object.emailId + " ")
   );
   // li.appendChild()
-  //console.log(document.createElement("li"));
-  const edBtn = document.createElement("input");
-  edBtn.id = "edBt";
-  edBtn.type = "button";
-  edBtn.value = "Edit";
-  edBtn.addEventListener("click", () => {
-    //console.log(object);
+  console.log(document.createElement("i"));
+  const a1 = document.createElement("input");
+  a1.id = "yash";
+  a1.type = "button";
+  a1.value = "Edit";
+  a1.addEventListener("click", () => {
+    console.log(object);
     document.getElementById("name").value = object.name;
     document.getElementById("email").value = object.emailId;
     li.remove();
   });
-  edBtn.className = "delete";
-  edBtn.style.border = "2px solid green";
-  // console.log(edBtn);
-  li.appendChild(edBtn);
+  a1.className = "delete";
+  a1.style.border = "2px solid green";
+  console.log(a1);
+  li.appendChild(a1);
 
-  const delBtn = document.createElement("input");
-  delBtn.id = "delBt";
-  delBtn.type = "button";
-  delBtn.value = "delete";
-  delBtn.addEventListener("click", () => {
-    localStorage.removeItem(object.emailId);
+  const a = document.createElement("input");
+  a.type = "button";
+  a.value = "delete";
+  a.addEventListener("click", () => {
+    localStorage.removeItem("userDetails" + object.emailId);
+    // axios.delete(`${apiendpoint}/registeruser/${object._id}`);
     li.remove();
   });
-  delBtn.className = "delete";
-  delBtn.style.border = "2px solid red";
-  console.log(delBtn);
-  li.appendChild(delBtn);
-  //console.log(li);
+  a.className = "delete";
+  a.style.border = "2px solid red";
+  console.log(a);
+  li.appendChild(a);
+  console.log(li);
 
   ul.appendChild(li);
 }

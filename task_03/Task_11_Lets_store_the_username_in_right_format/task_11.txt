@@ -1,0 +1,20 @@
+Task Description
+You were able to store single user Details in the local storage. This is not scalable.
+
+Deliverable
+
+Now try storing the user details as an object in the local storage. Watch this video 
+https://www.youtube.com/watch?v=AUOzvFzdIk4
+
+Big problem of the app - Everytime you add a new user, the older user gets removed.
+
+Why does this happen any ideas. Write the reason in the answer.
+
+
+Getting stuck to a problem and trying to figure out the solution to it is what will make you a 
+strong software developer.
+
+Watch this video to understand how you can debug effectively and find a solution.
+[If you are stuck for more than an hour , check the hints]
+
+Push the code to git upload the commit id.

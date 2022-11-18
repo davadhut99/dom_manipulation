@@ -25,8 +25,7 @@ function onSubmit(e) {
   } else {
 
     var storeed = localStorage.setItem(nameInput.value, emailInput.value);
-    alert("The info you added is stored in local storage "
-      + "Name -" + nameInput.value + "," + " Email -" + emailInput.value);
+
     // Clear fields
     nameInput.value = '';
     emailInput.value = '';

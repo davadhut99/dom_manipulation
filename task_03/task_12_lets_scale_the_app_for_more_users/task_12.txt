@@ -1,0 +1,33 @@
+Task Description
+You were able to store single user Details in the local storage. This is not scalable.
+
+
+
+Everytime you add a new user, the older user gets removed.
+
+
+
+Use some algorithm to store the details of multiple users in the local storage. (Check Hint1 for answer to this if stuck for long)
+Show the list of all the users who have applied right below the form using DOM Manipulations. Simply Iterate through the localstorage object to get all the keys stored in it.(Check Hint2 for answer to this if stuck for long)
+Show the booking made on the screen with the user details
+
+
+
+
+It should work like this. https://37tch.csb.app/
+
+Dont have to add the Edit and delete functionalities here
+
+
+
+Getting stuck to a problem and trying to figure out the solution to it is what will make you a strong software developer.
+
+Watch this video to understand how you can debug effectively and find a solution.
+
+
+
+Check the hints if you are stuck for very long
+
+
+
+Push the code to git and upload the commit ID
