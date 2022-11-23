@@ -1,0 +1,22 @@
+Task Description
+We have the list of all the people who contacted.
+
+
+A bug which could have been introduced. Watch this video to understand this common mistake
+
+https://www.youtube.com/watch?v=x6Ugc_HfVzo
+
+
+Deliverable - https://37tch.csb.app/. (Should function like this)
+
+
+Add a Delete Button - I want to be able to delete a few of them from the local storage as well as the UI because they are not interested in our product maybe. [check Hint 1 if stuck for long]
+Add an Edit Button -Put an edit button on the right of their name to edit the details of the user [check Hint 2 if stuck for long]
+
+
+﻿Struggling with CSS. Dont worry watch this video to know my master trick
+
+https://www.youtube.com/watch?v=jzmimybb3t8
+
+
+Implement the feature and push it to git and upload the commit id
