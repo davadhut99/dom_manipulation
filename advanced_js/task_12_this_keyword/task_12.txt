@@ -1,0 +1,54 @@
+What are the different type of usage of this as shown by the youtuber. List all of them
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+After listing all of them write a small code snippet for everyone of them and paste the code here.
+-------------------------------------------------------------------------------------
+this in a Method
+-------------------------------------------------------------------------------------
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Design pattern problem - How will you design a Student class which stores the name , age , phone number, board marks of each student. Make a constructor to initialize the values.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Write a function to check whether the student is egligible or not for college. If board marks > 40 -> egligible , if less than 40 -> not egligible.Write a function to check this.
+Create 5 students with different names and age.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Write a function which keep track of the number of students created. Have you heard of static variables. Leverage that now. Check Hints 1 if you are stuck.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FAT ARROW FUNCTIONS
+Deliverables
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Take the student class which you made up and write a function called egligible for placements which basically takes 
+the minimum board marks required by a candidate to sit for the company coming for placement and it returns a fat arrow function.
+The fat arrow function takes age as an argument and returns true if the given student has board marks greater than
+ minimum board marks required by company and is above the required age set by the company.[If stuck check the hint 2]
+Run the code across all the students and print the names of egligible students.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is the major difference betweenn the fat arrow function and normal function? Watch this video to understand.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Why was fat arrow introduced any idea ?
+
+
