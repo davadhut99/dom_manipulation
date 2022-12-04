@@ -1,43 +1,72 @@
 <html>
-    <body>
-        <h1 style="text-align:center ;"> Appointment Booking App</h1>
-        <form style="text-align:center ;"  onsubmit="saveToLocalStorage(event)">
-            <label> Name</label>
-            <input id='username' type="text" name="username"  required/>
-            <label> EmailId</label>
-            <input id='email' type="email" name="emailId"  required/>
-            <label> Phone Number</label>
-            <input id='phonenumber' type="tel" name="phonenumber" />
-            <button> Submit </button>
-        </form> <hr>
-        <ul id='listOfUsers'></ul>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-        <script>
-            function saveToLocalStorage(event) {
-                event.preventDefault();
-                const name = event.target.username.value;
-                const email = event.target.emailId.value;
-                const phonenumber = event.target.phonenumber.value;
-                const obj = {
-                    name,
-                    email,
-                    phonenumber
-                }
 
-                axios.post("https://crudcrud.com/api/a2336807bbb44bd2a879f9f60dd859a5/appointmentData", obj)
-                    .then((response) => {
-                        showNewUserOnScreen(response.data)
-                        console.log(response)
-                    })
-                    .catch((err)=> {
-                        document.body.innerHTML = document.body.innerHTML + "<h4> Something went wrong! </h4>"
-                        console.log(err)
-                    })
-                
+<body>
+    <h1 style="text-align:center ;"> Appointment Booking App</h1>
+    <form style="text-align:center ;" onsubmit="saveToLocalStorage(event)">
+        <label> Name</label>
+        <input id='username' type="text" name="username" required />
+        <label> EmailId</label>
+        <input id='email' type="email" name="emailId" required />
+        <label> Phone Number</label>
+        <input id='phonenumber' type="tel" name="phonenumber" />
+        <button> Submit </button>
+    </form>
+    <hr>
+    <ul id='listOfUsers'></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script>
+        function saveToLocalStorage(event) {
+            event.preventDefault();
+            const name = event.target.username.value;
+            const email = event.target.emailId.value;
+            const phonenumber = event.target.phonenumber.value;
+            const obj = {
+                name,
+                email,
+                phonenumber
             }
 
-        </script>
+            axios.post("https://crudcrud.com/api/a2336807bbb44bd2a879f9f60dd859a5/appointmentData", obj)
+                .then((response) => {
+                    showNewUserOnScreen(response.data)
+                    console.log(response)
+                })
+                .catch((err) => {
+                    document.body.innerHTML = document.body.innerHTML + "<h4> Something went wrong! </h4>"
+                    console.log(err)
+                })
+        }
+        
+        
+        window.addEventListener("DOMContentLoaded", () => {
+            axios.get("https://crudcrud.com/api/a2336807bbb44bd2a879f9f60dd859a5/appointmentData")
+                .then((response) => {
+                    for (var i = 0; i < response.data.length; i++) {
+                        showNewUserOnScreen(response.data[i])
+                    }
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        })
+
+        function showNewUserOnScreen(user) {
+            document.getElementById('email').value = '';
+            document.getElementById('username').value = '';
+            document.getElementById('phonenumber').value = '';
+
+            const parentNode = document.getElementById('listOfUsers');
+            const childHTML = `<li id=${user._id}> ${user.name} - ${user.email}
+                        <button onclick=deleteUser('${user._id}')> Delete User </button>
+                        <button onclick=editUserDetails('${user._id}','${user.name}','${user.phonenumber}')>Edit User </button>
+                     </li>`
+
+            parentNode.innerHTML = parentNode.innerHTML + childHTML;
+        }
+
+    </script>
 
 
-    </body>
+</body>
+
 </html>
