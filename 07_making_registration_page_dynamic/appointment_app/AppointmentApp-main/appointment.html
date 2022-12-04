@@ -64,6 +64,25 @@
             parentNode.innerHTML = parentNode.innerHTML + childHTML;
         }
 
+        function deleteUser(userId){
+                axios.delete(`https://crudcrud.com/api/a2336807bbb44bd2a879f9f60dd859a5/appointmentData/${userId}`)
+                    .then((response) => {
+                        removeUserFromScreen(userId)
+                    })
+                    .catch((err) => {
+                        console.log(err)
+                    })
+
+            }
+
+            function removeUserFromScreen(userId){
+                const parentNode = document.getElementById('listOfUsers');
+                const childNodeToBeDeleted = document.getElementById(userId);
+                if(childNodeToBeDeleted) {
+                    parentNode.removeChild(childNodeToBeDeleted)
+                }
+            }
+
     </script>
 
 
