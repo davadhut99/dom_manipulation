@@ -16,7 +16,6 @@
     as well as information regarding the server.
 
 
-
 2. What is axios?
     Axios is a promised-based HTTP client for JavaScript. 
     It has the ability to make HTTP requests from the browser and 

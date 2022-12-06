@@ -13,6 +13,7 @@ function updateTodo() {
   console.log('PUT/PATCH Request');
 }
 
+
 // DELETE REQUEST
 function removeTodo() {
   console.log('DELETE Request');
