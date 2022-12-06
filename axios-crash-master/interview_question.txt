@@ -1,0 +1,28 @@
+
+
+
+1. Why do we need headers any idea?
+    HTTP headers are the name or value pairs that are displayed 
+    in the request and response messages of message headers for Hypertext Transfer Protocol (HTTP).
+
+    HTTP headers can be mainly classified into two types: HTTP Request Header 
+    Whenever you type a URL into the address bar and try to access it, your browser sends 
+    an HTTP request to the server. The HTTP request header contains information in a text-record form, 
+    which includes particulars such as the type, capabilities, and version of the browser that generates the request, 
+    the operating system used by the client, the page that was requested, the various types of outputs accepted by the browser, 
+    and so on. HTTP Response Header Upon receiving the request header, the Web server will send an HTTP response header back
+    to the client. An HTTP response header includes information in a text-record form that a Web server transmits back to the 
+    client's browser. The response header contains particulars such as the type, date, and size of the file sent back by the server,
+    as well as information regarding the server.
+
+
+
+2. What is axios?
+    Axios is a promised-based HTTP client for JavaScript. 
+    It has the ability to make HTTP requests from the browser and 
+    handle the transformation of request and response data.
+
+
+3. What are the common problems faced when you make network calls and what should you do to solve it.
+    Base URL ,endpoint may not correct so 4XX error occocured (clent side )
+    payload wrong , if we pass wrong payload and if it incorrect then 5XX error occocured (server side)
