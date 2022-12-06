@@ -1,0 +1,14 @@
+
+Que.-:  Why are promises better than callbacks? 
+        They can handle multiple asynchronous operations easily 
+        and provide better error handling than callbacks and events. 
+        In other words also, we may say that, promises are the ideal choice for 
+        handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation
+
+
+Que.-: Write a short answer on callback vs promises.
+        A callback function is passed as an argument to another function whereas 
+        Promise is something that is achieved or completed in the future. In JavaScript, 
+        a promise is an object and we use the promise constructor to initialize a promise. 
+        To use promise objects we take help from promise consumers that are then() method(if promise fulfilled) 
+        and catch() method (if promise is rejected).        
